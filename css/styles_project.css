@@ -1,0 +1,154 @@
+:root {
+    --clr--dark-gray: #303234;
+    --clr--light-gray: #D3D3D3;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--clr--dark-gray);
+}
+
+a:hover{
+    cursor: pointer;
+}
+
+p, h2 {
+    color: var(--clr--dark-gray);
+    font-family: 'Noto Sans', sans-serif;
+}
+
+h1 {
+    color: var(--clr--light-gray);
+    font-family: 'Noto Sans', sans-serif;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 4rem;
+    font-size: 4rem;
+    font-style: italic;
+}
+
+/* header */
+
+header {
+    position: fixed;
+    width: 100%;
+    background-color: var(--clr--light-gray);
+    padding: .25rem 0;
+    display: flex;
+    justify-content: space-between;
+    z-index: 1;
+}
+
+header a{
+    color: var(--clr--dark-gray);
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: 900;
+    font-style: italic;
+    font-size: 2rem;
+    align-self: center;
+    padding: 0px 3px;
+    margin-left: 10%;
+    text-decoration: none;
+}
+
+nav {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    padding-right: 15%;
+}
+
+nav a {
+    color: var(--clr--dark-gray);
+    padding: 0 .75rem;
+    font-size: 1.25rem;
+    font-family: 'Noto Sans';
+    font-weight: 800;
+    text-decoration: none;
+}
+
+main{
+    width: 75%;
+    padding-top: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    padding-bottom: 4rem;
+    justify-items: center;
+}
+
+div {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--clr--light-gray);
+    padding: .75rem;
+    border-radius: 5px;
+    width: 500px;
+    gap: .5rem
+}
+
+div p, div h2 {
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+div p{
+    word-wrap: break-word;
+    font-size: 1.25rem;
+}
+
+div h2{
+    font-size: 1.75rem;
+}
+
+img {
+    max-width: 500px;
+    height: 400px;
+    border-radius: 5px;
+}
+
+footer {
+    background-color: black;
+    text-align: center;
+    padding: .75rem;
+}
+
+footer p{
+    font-family: 'Noto Sans', sans-serif;
+    color: var(--clr--light-gray);
+}
+
+@media (max-width: 1400px){
+    img {
+        max-width: 400px;
+        height: 300px;
+    }
+
+    div {
+        width: 400px;
+    }
+}
+
+@media (max-width: 1100px){
+    main{
+        grid-template-columns: 1fr;
+    }
+
+    img {
+        max-width: 500px;
+        height: 400px;
+    }
+
+    div{
+        width: 500px;
+    }
+}

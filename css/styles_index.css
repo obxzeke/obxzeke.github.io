@@ -1,0 +1,269 @@
+:root {
+    --clr--dark-gray: #303234;
+    --clr--light-gray: #D3D3D3;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+p, h4, h1, h3, h2, a{
+    color: var(--clr--light-gray);
+}
+
+body{
+    background-color: var(--clr--dark-gray);
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+}
+
+a:hover{
+    cursor: pointer;
+}
+
+/* Heading */
+
+header {
+    position: fixed;
+    width: 100%;
+    background-color: var(--clr--light-gray);
+    padding: .25rem 0;
+    display: flex;
+    justify-content: space-between;
+    z-index: 1;
+}
+
+header a{
+    color: var(--clr--dark-gray);
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: 900;
+    font-style: italic;
+    font-size: 2rem;
+    align-self: center;
+    padding: 0px 3px;
+    margin-left: 10%;
+    text-decoration: none;
+}
+
+nav {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    padding-right: 15%;
+}
+
+nav a {
+    color: var(--clr--dark-gray);
+    padding: 0 .75rem;
+    font-size: 1.25rem;
+    font-family: 'Noto Sans';
+    font-weight: 800;
+    text-decoration: none;
+}
+
+/* Hero Section */
+
+#title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    height: 100vh;
+    background-image: url(../images/programming.jpg);
+    background-position: center;
+    background-size: 200%
+}
+
+#title h1, #title h3 {
+    color: white;
+}
+
+h1 {
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 5rem;
+    font-weight: 600;
+    font-style: italic;
+    text-align: center;
+}
+
+#title div{
+    display: flex;
+    gap: 7rem;
+    padding-top: 1.75rem;
+}
+
+#title div a{
+    text-decoration: none;
+    background-color: white;
+    color: black;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 2rem;
+    font-weight: 500;
+    border-radius: 5%;
+    padding: 1.25rem 2rem;
+    opacity: 89%;
+}
+
+#title h3{
+    font-family: 'Noto Sans', sans-serif;
+    color: white;
+    opacity: 95%;
+    font-size: 1.6rem;
+    text-align: center;
+}
+
+/* About Me Section */
+
+#about {
+    padding: 25vh 0;
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto auto;
+    gap: 2.5rem;
+    margin-bottom: 4rem;
+    font-style: italic;
+}
+
+#about h2{
+    font-family: 'Noto Sans', sans-serif;
+    padding-right: 2rem;
+    align-self: center;
+    justify-self: left;
+    font-size: 4rem;
+}
+
+#portrait {
+    border-radius: 50%;
+    width: 25rem;
+    padding: 1rem;
+    grid-row: 2;
+    justify-self: center;
+}
+
+#about p{
+    font-family: 'Noto Sans', sans-serif;
+    grid-row: 2;
+    grid-column: span 2;
+    font-size: 1.7rem;
+    align-self: center;
+    line-height: 2rem;
+    text-align: center;
+}
+
+/* Reach me section */
+
+#contact {
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    padding: 0 0 25vh;
+}
+
+#contact h2{
+    font-size: 4rem;
+    width: 33%;
+    text-align: left;
+    padding-right: 2rem;
+    font-family: 'Noto Sans', sans-serif;
+    font-style: italic;
+}
+
+#contact div{
+    width: 70%;
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+#contact a{
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 2.5rem;
+    text-decoration: none;
+    word-spacing: .3rem;
+}
+
+/* Footer */
+
+footer {
+    background-color: black;
+    text-align: center;
+    padding: .75rem;
+}
+
+footer p{
+    font-family: 'Noto Sans', sans-serif;
+}
+
+@media (max-width: 1200px){
+    
+    #about {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    #portrait {
+        align-self: center;
+    }
+
+    #about h2 {
+        padding: 0;
+    }
+
+    #contact {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    #contact h2{
+        padding: 0;
+        width: auto;
+    }
+
+    #contact div{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+}
+
+@media (min-width:1201px) and (max-width: 1375px){
+    #contact {
+        display: grid;
+        grid-template-columns: auto 1fr 1fr;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    #contact h2{
+        padding: 0;
+        width: auto;
+        justify-content: left;
+    }
+
+    #contact div{
+        grid-column: span 2;
+        width: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+}
