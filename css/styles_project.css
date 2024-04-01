@@ -74,7 +74,7 @@ nav a {
 }
 
 main{
-    width: 75%;
+    width: 75vw;
     padding-top: 2rem;
     margin-left: auto;
     margin-right: auto;
@@ -128,12 +128,10 @@ footer p{
     color: var(--clr--light-gray);
 }
 
-@media (max-width: 1400px){
-    iframe, img {
-        max-width: 400px;
-        height: 300px;
+@media (max-width: 1500px){
+    main{
+        width: 90vw;
     }
-
     
 }
 
@@ -148,4 +146,31 @@ footer p{
     }
 
     
+}
+
+@media (max-width: 500px){
+    iframe, img {
+        max-width: 350px;
+        height: 197px;
+    }
+
+    main{
+        width: 100vw;
+    }
+
+    h1{
+        text-align: center;
+    }
+
+    div h2, div p{
+        text-align: center;
+    }
+
+    header a{
+        margin-left: 5%;
+    }
+
+    nav{
+        padding-right: 5%;
+    }
 }
