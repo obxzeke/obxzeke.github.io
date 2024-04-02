@@ -13,7 +13,7 @@ html{
     scroll-behavior: smooth;
 }
 
-p, h4, h1, h3, h2, a{
+p, h4, h1, h3, h2, a, label{
     color: var(--clr--light-gray);
 }
 
@@ -80,7 +80,7 @@ nav a {
     gap: 1.5rem;
     height: 100vh;
     background-image: url(../images/programming.jpg);
-    background-position: center;
+    background-position: 90%;
     background-size: 200%
 }
 
@@ -130,7 +130,7 @@ h1 {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto auto;
     gap: 2.5rem;
-    margin: 15vh auto;
+    margin: 7.5vh auto;
     font-style: italic;
 }
 
@@ -169,17 +169,19 @@ h1 {
 
 #contact {
     width: 75%;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 7.5vh auto;
     display: flex;
     flex-direction: column;
     gap: 5rem;
-    padding: 0 0 25vh;
+    padding: 0 0 5rem;
+}
+
+#contact-background{
+    background-image: radial-gradient(var(--clr--dark-gray)40%, black);
 }
 
 #contact h2{
     font-size: 4rem;
-    width: 33%;
     text-align: left;
     padding-right: 2rem;
     font-family: 'Noto Sans', sans-serif;
@@ -195,23 +197,132 @@ h1 {
 
 }
 
-#contact a{
+/* Input */
+
+form{
+    display: grid;
+    gap: 2rem;
+    width: 90%;
+    margin: auto;
+    column-gap: 3rem;
+}
+
+#form-name, #form-email, #form-phone, #form-message, #btn-submit{
+    height: auto;
+    border-radius: .25rem;
+    border: none;
+    padding: 1.25rem;
+    font-size: 1.5rem;
     font-family: 'Noto Sans', sans-serif;
-    font-size: 2.5rem;
-    text-decoration: none;
-    word-spacing: .3rem;
+    color: var(--clr--dark-gray);
+}
+
+#form-name{
+    grid-column: 1/2;
+}
+
+#form-email{
+    grid-row: 2/3;
+}
+
+#form-phone{
+    grid-row: 3/4;
+}
+
+#form-message{
+    grid-column: 2/3;
+    grid-row: 1/4;
+    resize: none;
+    overflow: auto;
+}
+
+#form-name::placeholder, #form-email::placeholder, #form-phone::placeholder, #form-message::placeholder{
+    color: black;
+    opacity: 50%;
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: 800;
+    font-style: italic;
+    font-size: 1.5rem;
+}
+
+#btn-submit{
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 800;
+    background-color: #007bff;
+    color: white;
+    grid-row: 4/5;
+    width: 40%;
+    justify-self: center;
+    grid-column: 1/3;
+    padding: 1rem 0;
+    margin-top: 1rem;
 }
 
 /* Footer */
 
 footer {
-    background-color: black;
+    background-color: var(--clr--light-gray);
     text-align: center;
-    padding: .75rem;
+    display: flex;
+    flex-direction: column;
+}
+
+#footer-links{
+    display: flex;
+    gap: 10vw;
+    margin: 2rem auto;
+    align-items: center;
+}
+
+#footer-links a{
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 4rem;
+    text-decoration: none;
+    word-spacing: .3rem;
+    font-weight: 500;
+    transition: all .5s;
+    color: var(--clr--dark-gray);
+}
+
+#email-logo:hover{
+    color: #CC0808;
+}
+
+#linkedin-logo:hover{
+    color: #0077B5;
+}
+
+#github-logo:hover{
+    color: #171515;
+}
+
+#footer-nav{
+    display: flex;
+    padding: 0 1rem 1rem;
+}
+
+#footer-nav a{
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: 500;
+    color: var(--clr--dark-gray);
+    font-size: 1.5rem;
+    text-decoration: none;
+    flex-grow: 1;
+}
+
+#footer-nav div{
+    flex-grow: 12;
 }
 
 footer p{
     font-family: 'Noto Sans', sans-serif;
+    font-size: 1.5rem;
+    color: var(--clr--dark-gray);
+    font-weight: 500;
+    flex-grow: 1;
+    justify-content: right;
+    width:fit-content;
 }
 
 @media (max-width: 1200px){
@@ -336,10 +447,39 @@ footer p{
 
     #contact{
         padding: 1rem 0;
+        margin-top: 1rem;
     }
     
     #contact div{
         gap: 2rem;
+    }
+
+    #contact h2{
+        text-align: center;
+        font-size: 3rem;
+        padding-bottom: 1rem;
+    }
+
+    form{
+        display: flex;
+        flex-direction: column;
+    }
+
+    #form-message{
+        height: 30vh;
+    }
+
+    #btn-submit{
+        width: auto;
+    }
+
+    #footer-nav{
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    #footer-nav p{
+        margin: auto;
     }
 
 }
